@@ -1,4 +1,5 @@
 ﻿using System;
+using ParallelPrograming.ch02;
 
 namespace ParallelPrograming
 {
@@ -6,7 +7,14 @@ namespace ParallelPrograming
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            /*** ch02 ***/
+            //GettingResultFromTasks.GetResultsFromTasks();
+            //TaskCancellation.CancelTaskViaPoll();
+            //TaskCancellation.CancelTaskViaCallback();
+            //TaskException.HandleMultipleExceptionsInTasks();
+            TaskException.HandlerMultipleExceptionsInCallback();
+
+
         }
     }
 }
