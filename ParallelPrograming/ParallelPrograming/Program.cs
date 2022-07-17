@@ -1,5 +1,6 @@
 ﻿using System;
 using ParallelPrograming.ch02;
+using ParallelPrograming.ch03;
 
 namespace ParallelPrograming
 {
@@ -8,12 +9,16 @@ namespace ParallelPrograming
         static  void Main(string[] args)
         {
             /*** ch02 ***/
-            GettingResultFromTasks.GetResultsFromTasks();
+            //GettingResultFromTasks.GetResultsFromTasks();
             //TaskCancellation.CancelTaskViaPoll();
             //TaskCancellation.CancelTaskViaCallback();
             //TaskException.HandleMultipleExceptionsInTasks();
             //TaskException.HandlerMultipleExceptionsInCallback();
             //ContinueWith.ContinueWhenAll();
+
+
+            /*** ch03 ***/
+            ChunkPartition.ChunkPartitionHandler();
         }
     }
 }
