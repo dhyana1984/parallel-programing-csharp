@@ -8,9 +8,11 @@
   <ItemGroup>
     <None Remove="ch02\" />
     <None Remove="ch03\" />
+    <None Remove="ch04\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ch02\" />
     <Folder Include="ch03\" />
+    <Folder Include="ch04\" />
   </ItemGroup>
 </Project>
