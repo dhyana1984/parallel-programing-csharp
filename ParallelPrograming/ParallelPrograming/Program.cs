@@ -18,7 +18,14 @@ namespace ParallelPrograming
 
 
             /*** ch03 ***/
-            ChunkPartition.ChunkPartitionHandler();
+            //ChunkPartition.ChunkPartitionHandler();
+            //ParallelLoop.ParallelInvokeMethod();
+            //ParallelLoop.ParallelForMethod();
+            //ParallelLoop.ParallelForEachMethod();
+            //ParallelLoop.ParallelDegreeOfParallelism();
+            //ParallelLoop.ParallelBreak();
+            //ParallelLoop.ParallelStop();
+            ParallelLoop.ParallelSumTask();
         }
     }
 }
