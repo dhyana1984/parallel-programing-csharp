@@ -29,10 +29,15 @@ namespace ParallelPrograming
             //ParallelLoop.ParallelSumTask();
 
             /*** ch04 ***/
-            PLINQOrder plinqOrder = new PLINQOrder();
-            WaitAllResult waitAllResult = new WaitAllResult();
+            //PLINQOrder plinqOrder = new PLINQOrder();
+            //WaitAllResult waitAllResult = new WaitAllResult();
             //plinqOrder.OrderAndUnOrder();
-            waitAllResult.getWaitAllResult();
+            //waitAllResult.getWaitAllResult();
+
+            /**** ch05 ****/
+            //EventWaitHandleSample.AutResetEventSample();
+            EventWaitHandleSample.ManualResetEventSample();
+
         }
     }
 }
