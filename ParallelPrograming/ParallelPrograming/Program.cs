@@ -1,6 +1,7 @@
 ﻿using System;
 using ParallelPrograming.ch02;
 using ParallelPrograming.ch03;
+using ParallelPrograming.ch04;
 
 namespace ParallelPrograming
 {
@@ -25,7 +26,18 @@ namespace ParallelPrograming
             //ParallelLoop.ParallelDegreeOfParallelism();
             //ParallelLoop.ParallelBreak();
             //ParallelLoop.ParallelStop();
-            ParallelLoop.ParallelSumTask();
+            //ParallelLoop.ParallelSumTask();
+
+            /*** ch04 ***/
+            //PLINQOrder plinqOrder = new PLINQOrder();
+            //WaitAllResult waitAllResult = new WaitAllResult();
+            //plinqOrder.OrderAndUnOrder();
+            //waitAllResult.getWaitAllResult();
+
+            /**** ch05 ****/
+            //EventWaitHandleSample.AutResetEventSample();
+            EventWaitHandleSample.ManualResetEventSample();
+
         }
     }
 }
