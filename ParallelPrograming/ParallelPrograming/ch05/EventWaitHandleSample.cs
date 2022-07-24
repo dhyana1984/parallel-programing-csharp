@@ -19,7 +19,7 @@ namespace ParallelPrograming.ch04
                 for (int i = 0; i < 10; i++)
                 {
                     Thread.Sleep(1000);
-                    // Send signal every 1 second, then 1 thread will unblock
+                    // set singnal as sending status
                     autoResetEvent.Set();
                 }
             });
@@ -29,7 +29,8 @@ namespace ParallelPrograming.ch04
             Parallel.For(1, 10, (i) =>
             {
                 Console.WriteLine($"Task with id {Task.CurrentId} waiting for signal to enter");
-                //when current task receive the signal, then excute the sum logic and other thread will keep blocking
+                // when current task receive the signal, only 1 excute the sum logic and other thread will keep blocking
+                // the status will be set as un-sending automatically
                 autoResetEvent.WaitOne();
                 sum += 1;
                 Console.WriteLine($"Task with id {Task.CurrentId} received signal to enter, the result of sum is {sum}");
@@ -47,7 +48,7 @@ namespace ParallelPrograming.ch04
                 {
                     Thread.Sleep(2000);
                     Console.WriteLine("Network is down");
-                    // set the manualResetEvent as initial false to simulate disconnect network
+                    // set the signal as un-sending status
                     manualResetEvent.Reset();
                 }
             });
@@ -59,6 +60,7 @@ namespace ParallelPrograming.ch04
                 {
                     Thread.Sleep(5000);
                     Console.WriteLine("Network is up");
+                    // set singnal as sending status
                     manualResetEvent.Set();
                 }
             });
@@ -68,7 +70,9 @@ namespace ParallelPrograming.ch04
                 Parallel.For(0, 5, (j) =>
                  {
                      Console.WriteLine($"Task with id {Task.CurrentId} waiting for network to be up");
-                     //All the block thread will be unblocked here
+                     //All the block task will be unblocked here
+                     //The status of manualResetEvent will not be set as un-sending untill manualResetEvent.Reset() called
+                     //AutoResetEvent.Set() = ManualResetEvent.Set()+ManualResetEvent.Reset()
                      manualResetEvent.WaitOne();
                      Console.WriteLine($"Tasl with id {Task.CurrentId} making server call");
                      Console.WriteLine($"{Task.CurrentId} is calling server...");

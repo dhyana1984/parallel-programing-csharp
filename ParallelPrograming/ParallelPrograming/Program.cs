@@ -2,6 +2,7 @@
 using ParallelPrograming.ch02;
 using ParallelPrograming.ch03;
 using ParallelPrograming.ch04;
+using ParallelPrograming.ch05;
 
 namespace ParallelPrograming
 {
@@ -36,8 +37,12 @@ namespace ParallelPrograming
 
             /**** ch05 ****/
             //EventWaitHandleSample.AutResetEventSample();
-            EventWaitHandleSample.ManualResetEventSample();
-
+            //EventWaitHandleSample.ManualResetEventSample();
+            //InterlockedSample.UseInterlocked();
+            //LockSample.UseLock();
+            //MutexAndSemaphore.UseMutex();
+            //MutexAndSemaphore.UseSemaphore();
+            SpinLockSample.UseSpinLock();
         }
     }
 }
