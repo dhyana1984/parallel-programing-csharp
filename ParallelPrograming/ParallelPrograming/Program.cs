@@ -3,6 +3,7 @@ using ParallelPrograming.ch02;
 using ParallelPrograming.ch03;
 using ParallelPrograming.ch04;
 using ParallelPrograming.ch05;
+using ParallelPrograming.ch06; 
 
 namespace ParallelPrograming
 {
@@ -42,7 +43,10 @@ namespace ParallelPrograming
             //LockSample.UseLock();
             //MutexAndSemaphore.UseMutex();
             //MutexAndSemaphore.UseSemaphore();
-            SpinLockSample.UseSpinLock();
+            //SpinLockSample.UseSpinLock();
+
+            /**** ch06 ****/
+            ConcurrentQueueStackSample.UseConcurrentQueue();
         }
     }
 }
