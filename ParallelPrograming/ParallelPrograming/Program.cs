@@ -46,7 +46,12 @@ namespace ParallelPrograming
             //SpinLockSample.UseSpinLock();
 
             /**** ch06 ****/
-            ConcurrentQueueStackSample.UseConcurrentQueue();
+            //ConcurrentQueueStackSample.UseConcurrentQueue();
+            //ConcurrentQueueStackSample.UseConcurrentStack();
+            //ConcurrentBagSample.UseConcurrentBag();
+            //BlockCollectionSample.UseBlockingCollection();
+            //BlockCollectionSample.UseMultipleBlockingCollection();
+            ConcurrentDictionarySample.UseConcurrentDictionary();
         }
     }
 }
