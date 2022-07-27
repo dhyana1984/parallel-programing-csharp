@@ -90,6 +90,29 @@ namespace ParallelPrograming.ch06
             watch.Stop();
             Console.WriteLine($"Concurrency queue calculated Sum is {cqSum} and should be {shouldBe}, time cost is {watch.ElapsedMilliseconds}"); //124750, slow, but no lock
         }
+
+        public static void UseConcurrentStack()
+        {
+            var concurrentStack = new ConcurrentStack<int>();
+            for (int i = 0; i < 500; i++)
+            {
+                concurrentStack.Push(i);
+            }
+            concurrentStack.PushRange(new[] { 1, 2, 3, 4, 5 });
+            int sum = 0;
+            Parallel.For(0, 500, i =>
+            {
+                int localSum = 0;
+                int localValue;
+                while (concurrentStack.TryPop(out localValue))
+                {
+                    Thread.Sleep(10);
+                    localSum += localValue;
+                }
+                Interlocked.Add(ref sum, localSum);
+            });
+            Console.WriteLine($"outsum = {sum}, should be 124765");
+        }
     }
 }
 
