@@ -3,7 +3,8 @@ using ParallelPrograming.ch02;
 using ParallelPrograming.ch03;
 using ParallelPrograming.ch04;
 using ParallelPrograming.ch05;
-using ParallelPrograming.ch06; 
+using ParallelPrograming.ch06;
+using ParallelPrograming.ch07;
 
 namespace ParallelPrograming
 {
@@ -51,7 +52,15 @@ namespace ParallelPrograming
             //ConcurrentBagSample.UseConcurrentBag();
             //BlockCollectionSample.UseBlockingCollection();
             //BlockCollectionSample.UseMultipleBlockingCollection();
-            ConcurrentDictionarySample.UseConcurrentDictionary();
+            //ConcurrentDictionarySample.UseConcurrentDictionary();
+
+            /**** ch07 ****/
+            //LazySample.UseLazyByConstructor();
+            //LazySample.UseLazyByDelegate();
+            //LazyException.CallLazyWithException();
+            //ThreadStaticSample.TestThreadStaticVariable();
+            //ThreadStaticSample.TestThreadLocal();
+            LazyInitializerSample.UseLazyInitializer();
         }
     }
 }
