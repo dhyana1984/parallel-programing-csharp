@@ -5,6 +5,8 @@ using ParallelPrograming.ch04;
 using ParallelPrograming.ch05;
 using ParallelPrograming.ch06;
 using ParallelPrograming.ch07;
+using ParallelPrograming.ch08;
+using ParallelPrograming.ch09;
 
 namespace ParallelPrograming
 {
@@ -60,7 +62,33 @@ namespace ParallelPrograming
             //LazyException.CallLazyWithException();
             //ThreadStaticSample.TestThreadStaticVariable();
             //ThreadStaticSample.TestThreadLocal();
-            LazyInitializerSample.UseLazyInitializer();
+            //LazyInitializerSample.UseLazyInitializer();
+
+            /**** ch08 ****/
+            //BeginInvokeSample.UseBeginInvoke();// Exception throwed: System.PlatformNotSupportedException: Operation is not supported on this platform.
+            //BeginInvokeSample.UseTaskInsteadOfBeginInvoke();
+
+            /**** ch09 ****/
+
+            //Scenario1, without try catch or await
+            //var task = AsyncTaskHandleExceptions.AsyncReturningTaskExample();// status of task is Faulted without exception thrown
+
+            //Scenario1 fixed, with IsFaulted and without await
+            //var task = AsyncTaskHandleExceptions.FixedAsyncReturningTaskExample();
+            //if (task.IsFaulted) // should check IsFaulted here
+            //{
+            //    Console.WriteLine(task.Exception.Flatten().Message.ToString());
+            //}
+
+            //Scenario2, with try catch inside and without await
+            //Best practise is wrap task inside try catch
+            //var task = AsyncTaskHandleExceptions.CallAsyncWithoutAwaitFromInsideTryCatch();
+
+            //Scenario3, use await outside of try catch, the same as Scenario1
+
+
+            Console.WriteLine("In main method after calling method");
+            Console.ReadLine();
         }
     }
 }
