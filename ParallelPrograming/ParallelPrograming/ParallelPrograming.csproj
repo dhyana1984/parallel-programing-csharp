@@ -12,6 +12,8 @@
     <None Remove="ch05\" />
     <None Remove="ch06\" />
     <None Remove="ch07\" />
+    <None Remove="ch08\" />
+    <None Remove="ch09\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ch02\" />
@@ -20,5 +22,7 @@
     <Folder Include="ch05\" />
     <Folder Include="ch06\" />
     <Folder Include="ch07\" />
+    <Folder Include="ch08\" />
+    <Folder Include="ch09\" />
   </ItemGroup>
 </Project>
