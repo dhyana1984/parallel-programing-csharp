@@ -52,6 +52,12 @@ namespace ParallelPrograming.ch09
                 Console.WriteLine(ex.StackTrace);
             }
         }
+
+        public async static void CallAsyncWithoutAwaitReturnAvoid()
+        {
+            Task task = DoSomethingFaulty();
+            Console.WriteLine("This should not execute");
+        }
     }
 }
 
