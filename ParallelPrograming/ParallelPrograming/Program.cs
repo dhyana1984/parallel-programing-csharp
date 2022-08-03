@@ -86,6 +86,9 @@ namespace ParallelPrograming
 
             //Scenario3, use await outside of try catch, the same as Scenario1
 
+            //Scenario4, return avoid
+            AsyncTaskHandleExceptions.CallAsyncWithoutAwaitReturnAvoid();
+
 
             Console.WriteLine("In main method after calling method");
             Console.ReadLine();
